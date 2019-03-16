@@ -1,0 +1,10 @@
+---
+
+- name: Install dependencies by apt
+  apt:
+    name:
+      - python
+      - python-pip
+      - python-setuptools
+    state: latest
+    update_cache: True

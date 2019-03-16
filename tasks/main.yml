@@ -1,0 +1,14 @@
+---
+# tasks file for ansible-dependencies
+
+- name: Install | (Debian)
+  include_tasks: Debian.yml
+  when: ansible_os_family == "Debian"
+
+
+
+- name: Install dependencies by pip
+  pip:
+    name:
+      - openshift
+      - pyyaml
